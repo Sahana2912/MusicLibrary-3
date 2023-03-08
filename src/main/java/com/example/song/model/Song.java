@@ -11,7 +11,7 @@ import javax.persistence.*;
 //import java.util.*;
 
 @Entity
-@Table(name = "song")
+@Table(name = "playlist")
 public class Song{
 
     @Id
@@ -33,6 +33,14 @@ public class Song{
     
     public Song() {}
     
+    public Song(int songId,String songName,String lyricist,String singer,String musicDirector)
+    {
+        this.songId=songId;
+        this.songName=songName;
+        this.lyricist=lyricist;
+        this.singer=singer;
+        this.musicDirector=musicDirector;
+    }
 
     public int getSongId()
     {

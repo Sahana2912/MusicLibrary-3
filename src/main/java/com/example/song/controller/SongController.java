@@ -43,7 +43,7 @@ public class SongController
         return songService.addSong(song);
     }
     @PutMapping("/songs/{songId}")
-    public Song updateSong(@RequestBody Song song,@PathVariable("songId") int songId)
+    public Song updateSong(@PathVariable("songId") int songId,@RequestBody Song song)
     {
         return songService.updateSong(song,songId);
     }
